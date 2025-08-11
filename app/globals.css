@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 255, 255, 255;
+    --background-end-rgb: 255, 255, 255;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-start-rgb));
+  background: linear-gradient(
+    to bottom,
+    rgb(var(--background-start-rgb)),
+    rgb(var(--background-end-rgb))
+  );
+}
+
+/* Print styles for balance sheet */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  .print-break-inside-avoid {
+    break-inside: avoid;
+  }
+
+  .print-page-break {
+    page-break-after: always;
+  }
+
+  table {
+    font-size: 12px;
+  }
+
+  .container {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Table styles for better readability */
+.balance-sheet-table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 0;
+}
+
+.balance-sheet-table th,
+.balance-sheet-table td {
+  border: 1px solid #e5e7eb;
+  padding: 8px 12px;
+  text-align: left;
+}
+
+.balance-sheet-table th {
+  background-color: #f9fafb;
+  font-weight: 600;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.balance-sheet-table .currency {
+  font-family: 'ui-monospace', 'SFMono-Regular', monospace;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.balance-sheet-table .group-header {
+  background-color: #3730a3;
+  color: white;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.balance-sheet-table .subgroup-header {
+  background-color: #f3f4f6;
+  font-weight: 600;
+}
+
+.balance-sheet-table .category-header {
+  background-color: #fef3c7;
+  font-weight: 600;
+}
+
+.balance-sheet-table .subtotal {
+  background-color: #e5e7eb;
+  font-weight: bold;
+  border-top: 2px solid #9ca3af;
+}
+
+.balance-sheet-table .total {
+  background-color: #1f2937;
+  color: white;
+  font-weight: bold;
+  font-size: 1.1em;
+  border-top: 3px solid #374151;
+}
