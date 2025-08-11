@@ -1,4 +1,4 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is a simple financial report application built with Next.js, TypeScript, and Tailwind CSS, using hardcoded sample data to demonstrate clean component structure, responsive styling, and clear coding practices. This project is intended as a code sample for interview review, focusing on readability and maintainability rather than full backend integration.
 
 ## Getting Started
 
