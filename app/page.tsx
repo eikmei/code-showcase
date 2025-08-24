@@ -12,7 +12,7 @@ import {
 // Sample data
 const samplePayload: BalanceSheetHTMLPayload = {
   title: 'Balance Sheet Report',
-  subtitle: '',
+  subtitle: 'As at 31 Dec 2024',
   userID: 'john.doe@company.com',
   companyEntityName: 'Sample Corporation Ltd.',
   dateFrom: '01/01/2024',
@@ -22,7 +22,6 @@ const samplePayload: BalanceSheetHTMLPayload = {
   totalCount: 25,
   data: [
     {
-      asAtDate: new Date('2024-12-31'),
       financialPeriod: '2024/12',
       financialYear: 2024,
       totalYtd: 1000000,

@@ -95,7 +95,6 @@ export interface Group {
 }
 
 export interface ReportData {
-  asAtDate: Date;
   financialPeriod: string;
   financialYear: number;
   groups: Group[];
